@@ -8,6 +8,7 @@ import 'package:app/injection_container.dart';
 
 import 'core/blocs/bloc_config/bloc_observer.dart';
 import 'core/navigation/custom_navigation.dart';
+import 'core/resources/routes_manager.dart';
 import 'core/resources/theme_manager.dart';
 
 void main() async {
@@ -49,6 +50,7 @@ class MyApp extends StatelessWidget {
             navigatorKey: CustomNavigator.navigatorState,
             onGenerateRoute: CustomNavigator.onCreateRoute,
             navigatorObservers: [CustomNavigator.routeObserver],
+            initialRoute: Routes.loginRoute,
             builder: (_, c) =>
                 LoaderOverlay(useDefaultLoading: false, child: _AppBuilder(c)),
           ),

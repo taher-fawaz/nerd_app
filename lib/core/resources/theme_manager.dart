@@ -33,7 +33,7 @@ ThemeData getApplicationTheme() {
           elevation: AppSize.s4,
           shadowColor: ColorManager.grey,
           titleTextStyle: TextStyleManager.getRegularStyle(
-              color: ColorManager.white, fontSize: FontSize.s16.sp)),
+              color: ColorManager.black, fontSize: FontSize.s16.sp)),
       // Button theme
       buttonTheme: ButtonThemeData(
           shape: const StadiumBorder(),
@@ -46,7 +46,7 @@ ThemeData getApplicationTheme() {
           style: ElevatedButton.styleFrom(
               minimumSize: const Size(double.infinity, AppSize.s12),
               textStyle:
-                  TextStyleManager.getRegularStyle(color: ColorManager.white),
+                  TextStyleManager.getRegularStyle(color: ColorManager.black),
               backgroundColor: Colors.transparent,
               elevation: 0,
               shape: BeveledRectangleBorder(
@@ -55,7 +55,7 @@ ThemeData getApplicationTheme() {
           style: TextButton.styleFrom(
               minimumSize: const Size(double.infinity, AppSize.s12),
               textStyle:
-                  TextStyleManager.getRegularStyle(color: ColorManager.white),
+                  TextStyleManager.getRegularStyle(color: ColorManager.black),
               backgroundColor: Colors.transparent,
               elevation: 0,
               shape: BeveledRectangleBorder(
@@ -63,41 +63,41 @@ ThemeData getApplicationTheme() {
       // Text theme
       textTheme: TextTheme(
         displayLarge: TextStyleManager.getRegularStyle(
-            color: ColorManager.white, fontSize: FontSize.s57.sp),
+            color: ColorManager.black, fontSize: FontSize.s57.sp),
         displayMedium: TextStyleManager.getRegularStyle(
-            color: ColorManager.white, fontSize: FontSize.s45.sp),
+            color: ColorManager.black, fontSize: FontSize.s45.sp),
         displaySmall: TextStyleManager.getBoldStyle(
-            color: ColorManager.white, fontSize: FontSize.s36.sp),
+            color: ColorManager.black, fontSize: FontSize.s36.sp),
         //
         headlineLarge: TextStyleManager.getRegularStyle(
-            color: ColorManager.white, fontSize: FontSize.s32.sp),
+            color: ColorManager.black, fontSize: FontSize.s32.sp),
         headlineMedium: TextStyleManager.getMediumStyle(
           color: ColorManager.darkPrimary,
           fontSize: FontSize.s28.sp,
         ),
         headlineSmall: TextStyleManager.getSemiBoldStyle(
-            color: ColorManager.white, fontSize: FontSize.s24.sp),
+            color: ColorManager.black, fontSize: FontSize.s24.sp),
         //
         titleLarge: TextStyleManager.getSemiBoldStyle(
-            color: ColorManager.white, fontSize: FontSize.s20.sp),
+            color: ColorManager.black, fontSize: FontSize.s20.sp),
         titleMedium: TextStyleManager.getSemiBoldStyle(
             color: ColorManager.greyTextColor, fontSize: FontSize.s18.sp),
         titleSmall: TextStyleManager.getRegularStyle(
             color: ColorManager.darkGrey, fontSize: FontSize.s14.sp),
         //
         labelLarge: TextStyleManager.getSemiBoldStyle(
-            color: ColorManager.white, fontSize: FontSize.s14.sp),
+            color: ColorManager.black, fontSize: FontSize.s14.sp),
         labelMedium: TextStyleManager.getMediumStyle(
-            color: ColorManager.white, fontSize: FontSize.s12.sp),
+            color: ColorManager.black, fontSize: FontSize.s12.sp),
         labelSmall: TextStyleManager.getMediumStyle(
-            color: ColorManager.white, fontSize: FontSize.s10.sp),
+            color: ColorManager.black, fontSize: FontSize.s10.sp),
         //
         bodyLarge: TextStyleManager.getMediumStyle(
-            color: ColorManager.white, fontSize: FontSize.s16.sp),
+            color: ColorManager.black, fontSize: FontSize.s16.sp),
         bodyMedium: TextStyleManager.getMediumStyle(
             color: ColorManager.darkPrimary, fontSize: FontSize.s14.sp),
         bodySmall: TextStyleManager.getRegularStyle(
-            color: ColorManager.white, fontSize: FontSize.s12.sp),
+            color: ColorManager.black, fontSize: FontSize.s12.sp),
       ),
       // input decoration theme (text form field)
 

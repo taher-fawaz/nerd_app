@@ -1,3 +1,4 @@
+import 'package:app/features/login/presentation/pages/login_screen.dart';
 import 'package:app/features/main/main_screen.dart';
 import 'package:app/features/recipes/presentation/pages/favourites_screen.dart';
 import 'package:app/features/recipes/presentation/pages/recipe_details_screen.dart';
@@ -37,8 +38,7 @@ abstract class CustomNavigator {
                 setupDependenciesMainScreen(child: const MainScreen()));
       case Routes.loginRoute:
         return MaterialPageRoute(
-            builder: (_) =>
-                setupDependenciesMainScreen(child: const MainScreen()));
+            builder: (_) => setupDependenciesMainScreen(child: LoginScreen()));
       default:
         {
           final screens = generateHomeRoute(settings);
