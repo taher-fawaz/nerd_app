@@ -5,12 +5,11 @@ import 'package:app/features/recipes/presentation/bloc/recipes_bloc.dart';
 
 import '../widgets/recipe_tile.dart';
 
-class RecipesScreen extends StatelessWidget {
-  const RecipesScreen({super.key});
+class FavoritesPageScreen extends StatelessWidget {
+  const FavoritesPageScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    BlocProvider.of<RecipesBloc>(context).add(const GetRecipesEvent());
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
@@ -22,9 +21,12 @@ class RecipesScreen extends StatelessWidget {
               return ListView.builder(
                   itemCount: state.recipes.length,
                   itemBuilder: (context, index) {
-                    return RecipeTile(
-                      recipe: state.recipes[index],
-                    );
+                    if (state.recipes[index].favorites == 1) {
+                      return RecipeTile(
+                        recipe: state.recipes[index],
+                      );
+                    }
+                    return const SizedBox.shrink();
                   });
             }),
           ),

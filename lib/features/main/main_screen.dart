@@ -39,6 +39,12 @@ class _MainScreenState extends State<MainScreen> {
           onGenerateRoute: CustomNavigator.generateHomeRoute
           //generateHomeRoute,
           ),
+      Navigator(
+          key: CustomNavigator.navigatorKeysBottomNav[1],
+          initialRoute: Routes.favoritesRoute,
+          onGenerateRoute: CustomNavigator.generateHomeRoute
+          //generateHomeRoute,
+          ),
     ];
   }
 
@@ -93,13 +99,7 @@ class _MainScreenState extends State<MainScreen> {
                 icon:
                     Icon(Icons.book_outlined, color: ColorManager.darkGreyText),
                 activeIcon: const FaIcon(FontAwesomeIcons.tablet),
-                label: "Tab 1",
-              ),
-              BottomNavigationBarItem(
-                icon: FaIcon(FontAwesomeIcons.addressBook,
-                    color: ColorManager.darkGreyText),
-                activeIcon: const FaIcon(FontAwesomeIcons.user),
-                label: "Tab 2",
+                label: "Favorites",
               ),
             ],
             currentIndex: selectedTab,

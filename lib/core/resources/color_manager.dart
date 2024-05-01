@@ -14,6 +14,10 @@ abstract class ColorManager {
   static Color error = HexColor.fromHex("#e61f34");
   static Color green = HexColor.fromHex("#26CE55");
   static Color black = HexColor.fromHex("#000000"); // red color
+  static LinearGradient linearBlackTop = LinearGradient(
+      colors: [Colors.black.withOpacity(0.5), Colors.transparent],
+      begin: Alignment.topCenter,
+      end: Alignment.bottomCenter);
 
   // text colors
   static Color greyTextColor = HexColor.fromHex("#FACBBD");

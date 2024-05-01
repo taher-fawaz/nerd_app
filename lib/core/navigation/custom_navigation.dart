@@ -1,4 +1,6 @@
 import 'package:app/features/main/main_screen.dart';
+import 'package:app/features/recipes/presentation/pages/favourites_screen.dart';
+import 'package:app/features/recipes/presentation/pages/recipe_details_screen.dart';
 
 import '../../features/recipes/presentation/pages/recipes_screen.dart';
 import '../../injection_container.dart';
@@ -18,9 +20,6 @@ abstract class CustomNavigator {
   static final GlobalKey<NavigatorState> navigatorState = GlobalKey();
 
   static List<GlobalKey<NavigatorState>> navigatorKeysBottomNav = [
-    GlobalKey<NavigatorState>(),
-    GlobalKey<NavigatorState>(),
-    GlobalKey<NavigatorState>(),
     GlobalKey<NavigatorState>(),
     GlobalKey<NavigatorState>(),
   ];
@@ -56,8 +55,13 @@ abstract class CustomNavigator {
     switch (settings.name) {
       case Routes.recipesRoute:
         return MaterialPageRoute(builder: (_) => const RecipesScreen());
-      // case Routes.recipesDetailsRoute:
-      //   return MaterialPageRoute(builder: (_) => const TabScreenOne());
+      case Routes.favoritesRoute:
+        return MaterialPageRoute(builder: (_) => const FavoritesPageScreen());
+      case Routes.recipesDetailsRoute:
+        return MaterialPageRoute(
+            builder: (_) => RecipeDetailPage(
+                  data: data["data"],
+                ));
 
       default:
         {
